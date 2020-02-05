@@ -8,47 +8,42 @@ namespace LiveCodingFinal
 {
     class Program
     {
+
+     
+
         static void Main(string[] args)
         {
-            string[] weatherTypes = { "clear", "cloudy", "Raining", "Full Moon" };
+      
 
-            string[] temperature = { "40", "50", "60", "70" };
+            double averageCandy = 250;
 
-            int averageCandy = 250;
-
-            int candyPerKid = 3;
-
-            
+            double averageKids = 3;
 
             double percentage = 0;
 
-            double moreTricks = averageCandy * percentage;
+            double moreKids = averageKids + (percentage + averageKids);
 
-            double totalCandy = averageCandy * candyPerKid + moreTricks; 
+           
 
-            for(int i = 0; i < weatherTypes.Length; i++)
-            {
-               if(weatherTypes[i] == "clear")
-                {
-                    percentage = 0.10;
-                }
-                if (weatherTypes[i] == "cloudy")
-                {
-                    percentage = 0;
-                }
-                if (weatherTypes[i] == "rainy")
-                {
-                    percentage = -0.25;
-                }
-                if (weatherTypes[i] == "Full Moon")
-                {
-                    percentage = +0.25;
-                }
-
-            }
+          
+         
 
             
 
         }
+
+
+        static void Tricks(string weatherTypes, int temperature)
+        {
+
+
+            if(weatherTypes == "Clear")
+            {
+                
+            }
+
+        }
+
+      
     }
 }
