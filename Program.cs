@@ -28,9 +28,21 @@ namespace LiveCodingFinal
 
             for(int i = 0; i < weatherTypes.Length; i++)
             {
-               if(weatherTypes[i] == "Clear")
+               if(weatherTypes[i] == "clear")
                 {
                     percentage = 0.10;
+                }
+                if (weatherTypes[i] == "cloudy")
+                {
+                    percentage = 0;
+                }
+                if (weatherTypes[i] == "rainy")
+                {
+                    percentage = -0.25;
+                }
+                if (weatherTypes[i] == "Full Moon")
+                {
+                    percentage = +0.25;
                 }
 
             }
