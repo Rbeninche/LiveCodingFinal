@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace LiveCodingFinal
 {
-    class Program
+    static class Program
     {
+        static string[] weatherTypes = new[] { "clear", "cloudy", "Raining", "Full Moon" };
+
+        static string[] temperature = new[] { "40", "50", "60", "70" };
+
+        static double averageKids = 250;
+
+        static double candyPerKids = 3;
+
+        static double weatherPercentage;
+
+        static double temperaturePercentage;
+
+
+
+        static double averagePercentage;
+
+        static double totalCandy;
         static void Main(string[] args)
         {
-            var weatherTypes = new [] { "clear", "cloudy", "Raining", "Full Moon" };
-
-            var temperature = new [] { "40", "50", "60", "70" };
-
-            double averageKids = 250;
-
-            double candyPerKids = 3;
-
-            double weatherPercentage;
-
-            double temperaturePercentage;
-
-
-
-            double averagePercentage;
-
-            double totalCandy;
+           
 
            
 
@@ -41,12 +42,10 @@ namespace LiveCodingFinal
                         
                         weatherPercentage = 0.10;
                         temperaturePercentage = 0;
-                        averagePercentage = ((averageKids * weatherPercentage) + (averageKids * temperaturePercentage)) + averageKids;
-                        totalCandy = averagePercentage * candyPerKids;
 
-                        
+                        Console.WriteLine("Clear and 50");
+                        CalculateQuantityOfCadies();
 
-                        Console.WriteLine(totalCandy);
 
                     }
                    
@@ -54,18 +53,17 @@ namespace LiveCodingFinal
                     {
                         weatherPercentage = -0.25;
                         temperaturePercentage = 0.20;
-                        averagePercentage = ((averageKids * weatherPercentage) + (averageKids * temperaturePercentage)) + averageKids;
-                        totalCandy = averagePercentage * candyPerKids;
-                        Console.WriteLine(totalCandy);
+                        Console.WriteLine("Raining and 70");
+                        CalculateQuantityOfCadies();
+
 
                     }
                     if (weatherTypes[i] == "Full Moon" && temperature[j] == "40")
                     {
                         weatherPercentage = 0.25;
                         temperaturePercentage = -0.05;
-                        averagePercentage = ((averageKids * weatherPercentage) + (averageKids * temperaturePercentage)) + averageKids;
-                        totalCandy = averagePercentage * candyPerKids;
-                        Console.WriteLine(totalCandy);
+                        Console.WriteLine("Full Moon and 50");
+                        CalculateQuantityOfCadies();
 
                     }
 
@@ -76,17 +74,24 @@ namespace LiveCodingFinal
            
 
             Console.ReadLine();
+}
 
-
-           
-
-            
- 
-            
+        static void CalculateQuantityOfCadies()
+        {
+            averagePercentage = ((averageKids * weatherPercentage) + (averageKids * temperaturePercentage)) + averageKids;
+            totalCandy = averagePercentage * candyPerKids;
+            Console.WriteLine("I need to buy " + totalCandy + " candies");
+            Console.WriteLine("***********************");
 
         }
 
-     
+
+        
+        }
+
+   
+
+
 
 
 
@@ -94,8 +99,3 @@ namespace LiveCodingFinal
     }
 
     
-
-
-
-    
-}
