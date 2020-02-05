@@ -1,4 +1,4 @@
-# """Halloween is coming, and you need to figure out how much candy to buy. Luckily you have tracked the weather, 
+"""Halloween is coming, and you need to figure out how much candy to buy. Luckily you have tracked the weather, 
 temperature, and number of tricker treaters from years past. From your research you have tracked 4 different types of weather: 
 "Clear", "Cloudy", "Raining", "Full Moon". From your research you have tracked 4 differnt types of temperature 40s, 50s, 60s, 70s.
 You get 10% more trick or treaters if the weather is clear.
